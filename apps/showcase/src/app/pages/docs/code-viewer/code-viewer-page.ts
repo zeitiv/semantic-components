@@ -15,6 +15,7 @@ import { SiCheckIcon, SiCopyIcon } from '@semantic-icons/lucide-icons';
 import { ComponentBadges } from '../../../components/component-badges/component-badges';
 import { TocHeading } from '../../../components/toc/toc-heading';
 import BasicCodeViewerDemoContainer from './demos/basic-code-viewer-demo-container';
+import { PackageManagerCodeViewerDemo } from './demos/package-manager-code-viewer-demo';
 
 @Component({
   selector: 'app-code-viewer-page',
@@ -28,6 +29,7 @@ import BasicCodeViewerDemoContainer from './demos/basic-code-viewer-demo-contain
     SiCheckIcon,
     SiCopyIcon,
     BasicCodeViewerDemoContainer,
+    PackageManagerCodeViewerDemo,
     TocHeading,
     ComponentBadges,
     ScHeading,
@@ -73,6 +75,14 @@ import BasicCodeViewerDemoContainer from './demos/basic-code-viewer-demo-contain
       <section class="space-y-8">
         <h2 scHeading appToc>Examples</h2>
         <app-basic-code-viewer-demo-container />
+      </section>
+
+      <section class="space-y-4">
+        <h2 scHeading appToc>Package Manager</h2>
+        <p class="text-muted-foreground text-sm">
+          Code viewer combined with tabs for package manager install commands.
+        </p>
+        <app-package-manager-code-viewer-demo />
       </section>
     </div>
   `,
